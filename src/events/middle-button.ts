@@ -66,8 +66,12 @@ export function middleButtonHandler(scrollbar: I.Scrollbar) {
     // Calculate scroll amount
     const { x, y } = calculateScroll(currentMousePos);
 
-    // Apply scroll
-    scrollbar.addMomentum(x, y);
+    // Apply scroll with boundary checking
+    // Create a simple event to pass to the transformable momentum method
+    const mockEvent = new Event('middlemousescroll');
+    scrollbar.addTransformableMomentum(x, y, mockEvent, () => {
+      // No additional logic needed here
+    });
 
     // Continue scrolling
     animationID = requestAnimationFrame(updateScroll);
