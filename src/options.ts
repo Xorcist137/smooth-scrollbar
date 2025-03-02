@@ -43,6 +43,12 @@ export class Options {
   continuousScrolling = true;
 
   /**
+   * Enable middle mouse button scrolling
+   */
+  @boolean
+  enableMiddleMouseScroll = true;
+  
+  /**
    * Delegate wheel events and touch events to the given element.
    * By default, the container element is used.
    * This option will be useful for dealing with fixed elements.
