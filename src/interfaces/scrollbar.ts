@@ -35,6 +35,11 @@ export type ScrollbarOptions = {
    *  Delegate wheel events and touch events to the given element. By default, the container element is used. This option will be useful for dealing with fixed elements.
    * @default null
    */
+  enableMiddleMouseScroll: boolean,
+  /**
+   *  Delegate wheel events and touch events to the given element. By default, the container element is used. This option will be useful for dealing with fixed elements.
+   * @default null
+   */
   delegateTo: EventTarget | null,
   /**
    * @deprecated `wheelEventTarget` is deprecated and will be removed in the future, use `delegateTo` instead.
